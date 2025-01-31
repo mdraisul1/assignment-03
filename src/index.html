@@ -18,17 +18,28 @@
 <body>
   <!-- header section start  -->
   <header class="bg-primary">
-    <div class="container py-5">
-      <div class="flex items-center justify-between">
+    <div class="container py-3">
+      <div class="flex items-center justify-between font-sora">
         <!-- logo section  -->
         <div class="flex items-center gap-2">
           <img src="../asstes/img/logo-header.png" alt="logo">
           <p class="text-2xl text-[#111111]">Browse<span class="text-[#FFDC26]">4</span>Pets</p>
         </div>
         <!-- navbar menu  -->
-        <div></div>
+        <div>
+          <ul class="flex items-center space-x-6 font-sora">
+            <li class="text-xl hover:text-accent transition duration-200"><a href="#">Find a pet</a></li>
+            <li class="text-xl hover:text-accent transition duration-200"><a href="#">Breeds</a></li>
+            <li class="text-xl hover:text-accent transition duration-200"><a href="#">Contact us</a></li>
+          </ul>
+        </div>
         <!-- navbar icons  -->
-        <div></div>
+        <div class="flex items-center space-x-4">
+          <span class="text-xl"><i class="ri-notification-line"></i></span>
+          <span class="text-xl cursor-pointer"><i class="ri-search-line"></i></span> 
+          <button class="px-6 py-2 text-xl border border-accent rounded-md hover:bg-transparent transition-all duration-300">Login</button>
+          <button class="bg-accent px-6 py-2 text-xl border border-accent rounded-md hover:bg-transparent transition-all duration-300">Register</button>
+        </div>
       </div>
     </div>
   </header>

@@ -15,6 +15,7 @@ module.exports = {
     extend: {
       fontFamily: {
         adlam : ['ADLaM Display', 'serif'],
+        sora: ['Sora', 'sans-serif'],
       },
       colors: {
         primary: "#FFF9F4",
