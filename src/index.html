@@ -290,18 +290,45 @@
   </section>
 
   <!-- footer section start  -->
-  <footer class="bg-accent py-24 overflow-hidden">
-    <div class="container">
-      <div class="" style="margin-top: 250px;">
-        <div class="space-y-6">
-          <a class="flex items-center gap-2" href="#"><img src="/asstes/img/logo-footer.png" alt="dog"><p class="text-2xl text-[#111111]">Browse<span class="text-white">4</span>Pets</p></a>
-          <p class="text-base text-[#111111]">Discover a world of treats, toys, and<br> essentials handpicked for your furry<br> friends</p>
-        </div>
+  <footer class="bg-accent py-24 overflow-hidden relative">
+    <div class="container px-6">
+      <div class="flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-20 mt-64 lg:mt-40" style="margin-top: 250px;">
         
+        <!-- Logo & Description -->
+        <div class="space-y-6 text-left w-full">
+          <a class="flex items-center gap-2" href="#">
+            <img src="/asstes/img/logo-footer.png" alt="dog" class="w-12 h-12">
+            <p class="text-2xl text-[#111111] font-adlam">Browse<span class="text-white">4</span>Pets</p>
+          </a>
+          <p class="text-base text-[#111111] font-adlam">
+            Discover a world of treats, toys, and <br>
+            essentials handpicked for your furry <br> friends
+          </p>
+        </div>
+  
+        <!-- Navigation Links -->
+        <div class="w-full">
+          <ul class="flex flex-col items-start space-y-4 font-adlam text-left">
+            <li class="text-xl hover:text-white transition duration-200"><a href="#">Find a pet</a></li>
+            <li class="text-xl hover:text-white transition duration-200"><a href="#">Breeds</a></li>
+            <li class="text-xl hover:text-white transition duration-200"><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+  
+        <!-- Social Links -->
+        <div class="w-full">
+          <p class="text-xl font-adlam">Follow Us</p>
+          <div class="text-2xl flex justify-start space-x-4 mt-2">
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i class="ri-youtube-fill"></i></a>
+          </div>
+        </div>
+  
       </div>
     </div>
   </footer>
-
   <!-- footer section end  -->
 </body>
 </html>
