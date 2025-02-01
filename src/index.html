@@ -1,412 +1,719 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <!-- meta tags -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <!-- meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-  <!-- remix icon cdn link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <!-- favicon -->
+    <link rel="icon" href="/asstes/img/logo-header.png" />
 
-  <!-- tailwind output css link -->
-  <link href="./output.css" rel="stylesheet">
+    <!-- remix icon cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
 
-  <!-- title tag -->
-  <title>Hello world!</title>
-</head>
-<body>
-  <!-- header section start  -->
-  <header class="bg-primary">
-    <div class="container py-3 overflow-hidden">
-      <div class="flex items-center justify-between font-sora">
-        <!-- logo section  -->
-        <div class="flex items-center gap-2">
-          <img src="../asstes/img/logo-header.png" alt="logo">
-          <p class="text-2xl text-[#111111]">Browse<span class="text-[#FFDC26]">4</span>Pets</p>
-        </div>
-        <!-- navbar menu -->
-        <div class="hidden md:block">
-          <ul class="flex items-center space-x-6 font-sora">
-            <li class="text-xl hover:text-accent transition duration-200"><a href="#">Find a pet</a></li>
-            <li class="text-xl hover:text-accent transition duration-200"><a href="#">Breeds</a></li>
-            <li class="text-xl hover:text-accent transition duration-200"><a href="#">Contact us</a></li>
-          </ul>
-        </div>
-        <!-- navbar icons -->
-        <div class="lg:flex items-center space-x-4">
-          <span class="text-xl"><i class="ri-notification-line"></i></span>
-          <span class="text-xl cursor-pointer"><i class="ri-search-line"></i></span> 
-          <button class="px-6 py-2 text-xl border border-accent rounded-md hover:bg-transparent transition-all duration-300">Login</button>
-          <button class="bg-accent px-6 py-2 text-xl border border-accent rounded-md hover:bg-transparent transition-all duration-300">Register</button>
-        </div>
-        <!-- mobile menu button-->
-        <!-- <div class="xl:hidden">
+    <!-- tailwind output css link -->
+    <link href="./output.css" rel="stylesheet" />
+
+    <!-- title tag -->
+    <title>Browse Pets</title>
+  </head>
+  <body>
+    <!-- header section start  -->
+    <header class="bg-primary">
+      <div class="container py-3 overflow-hidden">
+        <div class="flex items-center justify-between font-sora">
+          <!-- logo section  -->
+          <div class="flex items-center gap-2">
+            <img src="../asstes/img/logo-header.png" alt="logo" />
+            <p class="text-2xl text-[#111111]">
+              Browse<span class="text-[#FFDC26]">4</span>Pets
+            </p>
+          </div>
+          <!-- navbar menu -->
+          <div class="hidden lg:block">
+            <ul class="flex items-center space-x-6 font-sora">
+              <li class="text-xl hover:text-accent transition duration-200">
+                <a href="#">Find a pet</a>
+              </li>
+              <li class="text-xl hover:text-accent transition duration-200">
+                <a href="#">Breeds</a>
+              </li>
+              <li class="text-xl hover:text-accent transition duration-200">
+                <a href="#">Contact us</a>
+              </li>
+            </ul>
+          </div>
+          <!-- navbar icons -->
+          <div class="lg:flex hidden lg:blockitems-center space-x-4">
+            <span class="text-xl"><i class="ri-notification-line"></i></span>
+            <span class="text-xl cursor-pointer"
+              ><i class="ri-search-line"></i
+            ></span>
+            <button
+              class="px-6 py-2 text-xl border border-accent rounded-md hover:bg-transparent transition-all duration-300"
+            >
+              Login
+            </button>
+            <button
+              class="bg-accent px-6 py-2 text-xl border border-accent rounded-md hover:bg-transparent transition-all duration-300"
+            >
+              Register
+            </button>
+          </div>
+          <!-- mobile menu button-->
+          <div class="lg:hidden">
           <button class="text-xl" aria-label="Mobile menu toggle">
             <i class="ri-menu-line"></i>
           </button>
-        </div> -->    
-      </div>
-    </div>
-    <!-- hero section start  -->
-    <div class="bg-cover bg-no-repeat h-[749px] flex items-center opacity-0 animate-fade-in-up" style="background-image: url(/asstes/img/cat-big.png);">
-      <div class="container text-center md:text-left opacity-0 animate-fade-in-up">
-        <h1 class="font-adlam text-6xl lg:text-6xl leading-[50px] md:leading-[73px]">Pamper Your Pet,<br> Because They Deserve<br> the Best</h1>
-        <p class="text-xl mt-6">Discover a world of treats, toys, and essentials handpicked for<br class="hidden md:inline"> your furry friends. Shop now and make tails wag with joy!</p>
-        <button class="bg-accent px-6 py-2 text-xl border border-accent rounded-md hover:bg-transparent transition-all duration-300 mt-6 font-semibold">Find a Pet</button>
-      </div>
-    </div>
-  </header>  
-  <!-- header section end  -->
-    
-  <!-- main section start  -->
-  <main>
-    <!-- Browse By Categories section  -->
-    <section class="container py-24">
-      <h2 class="text-4xl font-semibold font-adlam mb-16">Browse By Categories</h2>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-        <!-- category 1 -->
-        <div class="bg-secondary flex flex-col justify-center items-center rounded-md py-10">
-          <div class="bg-white rounded-full p-4 mb-3 flex items-center justify-center">
-            <img src="/asstes/img/dog-cartoon.png" alt="dog" class="w-12 h-12">
-          </div>
-          <h3 class="text-xl font-adlam">Dogs</h3>
-          <p class="text-sm">3 items</p>
         </div>
-    
-        <!-- category 2 -->
-        <div class="bg-secondary flex flex-col justify-center items-center rounded-md py-10">
-          <div class="bg-white rounded-full p-4 mb-3 flex items-center justify-center">
-            <img src="/asstes/img/fish-cartoon.png" alt="fish" class="w-12 h-12">
-          </div>
-          <h3 class="text-xl font-adlam">Fish</h3>
-          <p class="text-sm">3 items</p>
-        </div>
-    
-        <!-- category 3 -->
-        <div class="bg-secondary flex flex-col justify-center items-center rounded-md py-10">
-          <div class="bg-white rounded-full p-4 mb-3 flex items-center justify-center">
-            <img src="/asstes/img/cat-cartoon.png" alt="cat" class="w-12 h-12">
-          </div>
-          <h3 class="text-xl font-adlam">Cat</h3>
-          <p class="text-sm">3 items</p>
-        </div>
-    
-        <!-- category 4 -->
-        <div class="bg-secondary flex flex-col justify-center items-center rounded-md py-10">
-          <div class="bg-white rounded-full p-4 mb-3 flex items-center justify-center">
-            <img src="/asstes/img/bird-cartoon.png" alt="bird" class="w-12 h-12">
-          </div>
-          <h3 class="text-xl font-adlam">Bird</h3>
-          <p class="text-sm">3 items</p>
-        </div>
-    
-        <!-- category 5 -->
-        <div class="bg-secondary flex flex-col justify-center items-center rounded-md py-10">
-          <div class="bg-white rounded-full p-4 mb-3 flex items-center justify-center">
-            <img src="/asstes/img/cute-pet-small.png" alt="small pet" class="w-12 h-12">
-          </div>
-          <h3 class="text-xl font-adlam">Small pet</h3>
-          <p class="text-sm">3 items</p>
-        </div>
-    
-        <!-- category 6 -->
-        <div class="bg-secondary flex flex-col justify-center items-center rounded-md py-10">
-          <div class="bg-white rounded-full p-4 mb-3 flex items-center justify-center">
-            <img src="/asstes/img/rabbit-cartoon.png" alt="dog" class="w-12 h-12">
-          </div>
-          <h3 class="text-xl font-adlam">Rabbit</h3>
-          <p class="text-sm">3 items</p>
         </div>
       </div>
-    </section>
+      <!-- hero section start  -->
+      <div
+        class="bg-cover bg-no-repeat h-[749px] flex items-center animate-slide-in-fwd-bottom"
+        style="background-image: url(/asstes/img/cat-big.png)"
+      >
+        <div class="container text-center md:text-left animate-slide-in-fwd-bottom">
+          <h1
+            class="font-adlam text-4xl lg:text-6xl leading-[50px] md:leading-[73px]"
+          >
+            Pamper Your Pet,<br />
+            Because They Deserve<br />
+            the Best
+          </h1>
+          <p class="text-xl mt-6">
+            Discover a world of treats, toys, and essentials handpicked for<br
+              class="hidden md:inline"
+            />
+            your furry friends. Shop now and make tails wag with joy!
+          </p>
+          <button
+            class="bg-accent px-6 py-2 text-xl border border-accent rounded-md hover:bg-transparent transition-all duration-300 mt-6 font-semibold"
+          >
+            Find a Pet
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- header section end  -->
 
-    <!-- product section start  --> 
-    <section class="bg-primary py-24">
-      <div class="container px-4 md:px-6 lg:px-8">
-        <h2 class="text-3xl md:text-4xl font-semibold font-adlam mb-6 text-center md:text-left">
-          Trending Pet Products
+    <!-- main section start  -->
+    <main>
+      <!-- Browse By Categories section  -->
+      <section class="container py-24">
+        <h2 class="text-4xl font-semibold font-adlam mb-16">
+          Browse By Categories
         </h2>
-        <div class="flex flex-col lg:flex-row gap-6">
-          <!-- Card section -->
-          <div class="bg-secondary w-full md:w-[370px] h-auto md:h-[402px] relative p-6 md:p-8 rounded-lg">
-            <div class="space-y-6 z-10">
-              <h3 class="text-2xl md:text-3xl font-semibold">T-Shirt for Dog</h3>
-              <p class="text-base">
-                Discover a world of treats, toys, and<br>essentials for your furry friend
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <!-- category 1 -->
+          <div
+            class="bg-secondary flex flex-col justify-center items-center rounded-md py-10"
+          >
+            <div
+              class="bg-white rounded-full p-4 mb-3 flex items-center justify-center"
+            >
+              <img
+                src="/asstes/img/dog-cartoon.png"
+                alt="dog"
+                class="w-12 h-12"
+              />
+            </div>
+            <h3 class="text-xl font-adlam">Dogs</h3>
+            <p class="text-sm">3 items</p>
+          </div>
+
+          <!-- category 2 -->
+          <div
+            class="bg-secondary flex flex-col justify-center items-center rounded-md py-10"
+          >
+            <div
+              class="bg-white rounded-full p-4 mb-3 flex items-center justify-center"
+            >
+              <img
+                src="/asstes/img/fish-cartoon.png"
+                alt="fish"
+                class="w-12 h-12"
+              />
+            </div>
+            <h3 class="text-xl font-adlam">Fish</h3>
+            <p class="text-sm">3 items</p>
+          </div>
+
+          <!-- category 3 -->
+          <div
+            class="bg-secondary flex flex-col justify-center items-center rounded-md py-10"
+          >
+            <div
+              class="bg-white rounded-full p-4 mb-3 flex items-center justify-center"
+            >
+              <img
+                src="/asstes/img/cat-cartoon.png"
+                alt="cat"
+                class="w-12 h-12"
+              />
+            </div>
+            <h3 class="text-xl font-adlam">Cat</h3>
+            <p class="text-sm">3 items</p>
+          </div>
+
+          <!-- category 4 -->
+          <div
+            class="bg-secondary flex flex-col justify-center items-center rounded-md py-10"
+          >
+            <div
+              class="bg-white rounded-full p-4 mb-3 flex items-center justify-center"
+            >
+              <img
+                src="/asstes/img/bird-cartoon.png"
+                alt="bird"
+                class="w-12 h-12"
+              />
+            </div>
+            <h3 class="text-xl font-adlam">Bird</h3>
+            <p class="text-sm">3 items</p>
+          </div>
+
+          <!-- category 5 -->
+          <div
+            class="bg-secondary flex flex-col justify-center items-center rounded-md py-10"
+          >
+            <div
+              class="bg-white rounded-full p-4 mb-3 flex items-center justify-center"
+            >
+              <img
+                src="/asstes/img/cute-pet-small.png"
+                alt="small pet"
+                class="w-12 h-12"
+              />
+            </div>
+            <h3 class="text-xl font-adlam">Small pet</h3>
+            <p class="text-sm">3 items</p>
+          </div>
+
+          <!-- category 6 -->
+          <div
+            class="bg-secondary flex flex-col justify-center items-center rounded-md py-10"
+          >
+            <div
+              class="bg-white rounded-full p-4 mb-3 flex items-center justify-center"
+            >
+              <img
+                src="/asstes/img/rabbit-cartoon.png"
+                alt="dog"
+                class="w-12 h-12"
+              />
+            </div>
+            <h3 class="text-xl font-adlam">Rabbit</h3>
+            <p class="text-sm">3 items</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- product section start  -->
+      <section class="bg-primary py-24">
+        <div class="container px-4 md:px-6 lg:px-8">
+          <h2
+            class="text-3xl md:text-4xl font-semibold font-adlam mb-6 text-center md:text-left"
+          >
+            Trending Pet Products
+          </h2>
+          <div class="flex flex-col lg:flex-row gap-6">
+            <!-- Card section -->
+            <div
+              class="bg-secondary w-full md:w-[370px] h-auto md:h-[402px] relative p-6 md:p-8 rounded-lg"
+            >
+              <div class="space-y-6 z-10">
+                <h3 class="text-2xl md:text-3xl font-semibold">
+                  T-Shirt for Dog
+                </h3>
+                <p class="text-base">
+                  Discover a world of treats, toys, and<br />essentials for your
+                  furry friend
+                </p>
+                <button
+                  class="bg-white px-6 py-2 text-xl border border-white rounded-md hover:bg-transparent transition-all duration-300"
+                >
+                  Shop Now
+                </button>
+              </div>
+              <img
+                src="/asstes/img/cute-pet-small.png"
+                alt="dog"
+                class="absolute bottom-0 right-0 w-32 md:w-auto"
+              />
+            </div>
+            <!-- Product section -->
+            <div
+              class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-4 md:gap-6 flex-1"
+            >
+              <!-- Product Items -->
+              <div
+                class="bg-white p-4 xl:px-6 xl:py-3 rounded-md shadow-md flex items-center gap-4 md:gap-8"
+              >
+                <div class="bg-[#FFF9F4] p-3 rounded-md">
+                  <img
+                    src="/asstes/img/dog-cartoon.png"
+                    alt="dog"
+                    class="w-10 h-10"
+                  />
+                </div>
+                <div>
+                  <i class="ri-star-line text-accent"
+                    ><span class="text-black font-bold">4.5</span></i
+                  ><br />
+                  <span class="text-base md:text-xl font-semibold">Pet Bet</span
+                  ><br />
+                  <span class="text-sm font-bold">$39.99</span>
+                </div>
+              </div>
+              <div
+                class="bg-white p-4 xl:px-6 xl:py-3 rounded-md shadow-md flex items-center gap-4 md:gap-8"
+              >
+                <div class="bg-[#FFF9F4] p-3 rounded-md">
+                  <img
+                    src="/asstes/img/dog-cartoon.png"
+                    alt="dog"
+                    class="w-10 h-10"
+                  />
+                </div>
+                <div>
+                  <i class="ri-star-line text-accent"
+                    ><span class="text-black font-bold">4.5</span></i
+                  ><br />
+                  <span class="text-base md:text-xl font-semibold">Pet Bet</span
+                  ><br />
+                  <span class="text-sm font-bold">$39.99</span>
+                </div>
+              </div>
+              <div
+                class="bg-white p-4 xl:px-6 xl:py-3 rounded-md shadow-md flex items-center gap-4 md:gap-8"
+              >
+                <div class="bg-[#FFF9F4] p-3 rounded-md">
+                  <img
+                    src="/asstes/img/dog-cartoon.png"
+                    alt="dog"
+                    class="w-10 h-10"
+                  />
+                </div>
+                <div>
+                  <i class="ri-star-line text-accent"
+                    ><span class="text-black font-bold">4.5</span></i
+                  ><br />
+                  <span class="text-base md:text-xl font-semibold">Pet Bet</span
+                  ><br />
+                  <span class="text-sm font-bold">$39.99</span>
+                </div>
+              </div>
+              <div
+                class="bg-white p-4 xl:px-6 xl:py-3 rounded-md shadow-md flex items-center gap-4 md:gap-8"
+              >
+                <div class="bg-[#FFF9F4] p-3 rounded-md">
+                  <img
+                    src="/asstes/img/dog-cartoon.png"
+                    alt="dog"
+                    class="w-10 h-10"
+                  />
+                </div>
+                <div>
+                  <i class="ri-star-line text-accent"
+                    ><span class="text-black font-bold">4.5</span></i
+                  ><br />
+                  <span class="text-base md:text-xl font-semibold">Pet Bet</span
+                  ><br />
+                  <span class="text-sm font-bold">$39.99</span>
+                </div>
+              </div>
+              <div
+                class="bg-white p-4 xl:px-6 xl:py-3 rounded-md shadow-md flex items-center gap-4 md:gap-8"
+              >
+                <div class="bg-[#FFF9F4] p-3 rounded-md">
+                  <img
+                    src="/asstes/img/dog-cartoon.png"
+                    alt="dog"
+                    class="w-10 h-10"
+                  />
+                </div>
+                <div>
+                  <i class="ri-star-line text-accent"
+                    ><span class="text-black font-bold">4.5</span></i
+                  ><br />
+                  <span class="text-base md:text-xl font-semibold">Pet Bet</span
+                  ><br />
+                  <span class="text-sm font-bold">$39.99</span>
+                </div>
+              </div>
+              <div
+                class="bg-white p-4 xl:px-6 xl:py-3 rounded-md shadow-md flex items-center gap-4 md:gap-8"
+              >
+                <div class="bg-[#FFF9F4] p-3 rounded-md">
+                  <img
+                    src="/asstes/img/dog-cartoon.png"
+                    alt="dog"
+                    class="w-10 h-10"
+                  />
+                </div>
+                <div>
+                  <i class="ri-star-line text-accent"
+                    ><span class="text-black font-bold">4.5</span></i
+                  ><br />
+                  <span class="text-base md:text-xl font-semibold">Pet Bet</span
+                  ><br />
+                  <span class="text-sm font-bold">$39.99</span>
+                </div>
+              </div>
+              <div
+                class="bg-white p-4 xl:px-6 xl:py-3 rounded-md shadow-md flex items-center gap-4 md:gap-8"
+              >
+                <div class="bg-[#FFF9F4] p-3 rounded-md">
+                  <img
+                    src="/asstes/img/dog-cartoon.png"
+                    alt="dog"
+                    class="w-10 h-10"
+                  />
+                </div>
+                <div>
+                  <i class="ri-star-line text-accent"
+                    ><span class="text-black font-bold">4.5</span></i
+                  ><br />
+                  <span class="text-base md:text-xl font-semibold">Pet Bet</span
+                  ><br />
+                  <span class="text-sm font-bold">$39.99</span>
+                </div>
+              </div>
+              <div
+                class="bg-white p-4 xl:px-6 xl:py-3 rounded-md shadow-md flex items-center gap-4 md:gap-8"
+              >
+                <div class="bg-[#FFF9F4] p-3 rounded-md">
+                  <img
+                    src="/asstes/img/dog-cartoon.png"
+                    alt="dog"
+                    class="w-10 h-10"
+                  />
+                </div>
+                <div>
+                  <i class="ri-star-line text-accent"
+                    ><span class="text-black font-bold">4.5</span></i
+                  ><br />
+                  <span class="text-base md:text-xl font-semibold">Pet Bet</span
+                  ><br />
+                  <span class="text-sm font-bold">$39.99</span>
+                </div>
+              </div>
+              <div
+                class="bg-white p-4 xl:px-6 xl:py-3 rounded-md shadow-md flex items-center gap-4 md:gap-8"
+              >
+                <div class="bg-[#FFF9F4] p-3 rounded-md">
+                  <img
+                    src="/asstes/img/dog-cartoon.png"
+                    alt="dog"
+                    class="w-10 h-10"
+                  />
+                </div>
+                <div>
+                  <i class="ri-star-line text-accent"
+                    ><span class="text-black font-bold">4.5</span></i
+                  ><br />
+                  <span class="text-base md:text-xl font-semibold">Pet Bet</span
+                  ><br />
+                  <span class="text-sm font-bold">$39.99</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- pet product section start  -->
+      <section class="py-24">
+        <div class="container mx-auto px-4">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          >
+            <!-- Product Card 1 -->
+            <div class="w-full border rounded-lg shadow-md p-4 space-y-2">
+              <div
+                class="text-black text-2xl font-bold px-3 py-1 rounded-md inline-block"
+              >
+                Offer
+              </div>
+              <div class="flex justify-center my-4">
+                <img
+                  src="/asstes/img/900_P992.jpg"
+                  alt="Dreamies Cat Treat"
+                  class="h-40"
+                />
+              </div>
+              <h3 class="font-semibold text-lg">
+                Dreamies Cat Treat Biscuits with Salmon Flavour
+              </h3>
+              <div class="flex items-center text-accent text-sm mt-2">
+                <span class="flex">★★★★★</span>
+                <span class="ml-2 text-gray-600">119 reviews</span>
+              </div>
+              <p class="text-gray-700 text-sm mt-1">60g</p>
+              <p class="text-accent font-semibold mt-2">
+                Online Only 3 For £3 On Selected...
               </p>
-              <button class="bg-white px-6 py-2 text-xl border border-white rounded-md hover:bg-transparent transition-all duration-300">
-                Shop Now
+              <p class="text-2xl font-bold mt-1">£1.59</p>
+              <div
+                class="flex items-center bg-gray-400 text-black rounded-md px-3 py-1 text-sm mt-2"
+              >
+                <span class="bg-accent text-white px-2 py-1 rounded-md"
+                  >easy-repeat</span
+                >
+                <span class="ml-2">Save 5%</span>
+              </div>
+              <button
+                class="bg-accent text-black font-semibold text-lg w-full py-3 rounded-lg mt-4 hover:bg-transparent border border-accent transition"
+              >
+                Add to basket
               </button>
             </div>
-            <img src="/asstes/img/cute-pet-small.png" alt="dog" class="absolute bottom-0 right-0 w-32 md:w-auto">
+
+            <!-- product card 2 -->
+            <div class="w-full border rounded-lg shadow-md p-4 space-y-2">
+              <div
+                class="text-black text-2xl font-bold px-3 py-1 rounded-md inline-block"
+              >
+                Offer
+              </div>
+              <div class="flex justify-center my-4">
+                <img
+                  src="/asstes/img/900_P992.jpg"
+                  alt="Dreamies Cat Treat"
+                  class="h-40"
+                />
+              </div>
+              <h3 class="font-semibold text-lg">
+                Dreamies Cat Treat Biscuits with Salmon Flavour
+              </h3>
+              <div class="flex items-center text-accent text-sm mt-2">
+                <span class="flex">★★★★★</span>
+                <span class="ml-2 text-gray-600">119 reviews</span>
+              </div>
+              <p class="text-gray-700 text-sm mt-1">60g</p>
+              <p class="text-accent font-semibold mt-2">
+                Online Only 3 For £3 On Selected...
+              </p>
+              <p class="text-2xl font-bold mt-1">£1.59</p>
+              <div
+                class="flex items-center bg-gray-400 text-black rounded-md px-3 py-1 text-sm mt-2"
+              >
+                <span class="bg-accent text-white px-2 py-1 rounded-md"
+                  >easy-repeat</span
+                >
+                <span class="ml-2">Save 5%</span>
+              </div>
+              <button
+                class="bg-accent text-black font-semibold text-lg w-full py-3 rounded-lg mt-4 hover:bg-transparent border border-accent transition"
+              >
+                Add to basket
+              </button>
+            </div>
+
+            <!-- product card 3 -->
+            <div class="w-full border rounded-lg shadow-md p-4 space-y-2">
+              <div
+                class="text-black text-2xl font-bold px-3 py-1 rounded-md inline-block"
+              >
+                Offer
+              </div>
+              <div class="flex justify-center my-4">
+                <img
+                  src="/asstes/img/900_P992.jpg"
+                  alt="Dreamies Cat Treat"
+                  class="h-40"
+                />
+              </div>
+              <h3 class="font-semibold text-lg">
+                Dreamies Cat Treat Biscuits with Salmon Flavour
+              </h3>
+              <div class="flex items-center text-accent text-sm mt-2">
+                <span class="flex">★★★★★</span>
+                <span class="ml-2 text-gray-600">119 reviews</span>
+              </div>
+              <p class="text-gray-700 text-sm mt-1">60g</p>
+              <p class="text-accent font-semibold mt-2">
+                Online Only 3 For £3 On Selected...
+              </p>
+              <p class="text-2xl font-bold mt-1">£1.59</p>
+              <div
+                class="flex items-center bg-gray-400 text-black rounded-md px-3 py-1 text-sm mt-2"
+              >
+                <span class="bg-accent text-white px-2 py-1 rounded-md"
+                  >easy-repeat</span
+                >
+                <span class="ml-2">Save 5%</span>
+              </div>
+              <button
+                class="bg-accent text-black font-semibold text-lg w-full py-3 rounded-lg mt-4 hover:bg-transparent border border-accent transition"
+              >
+                Add to basket
+              </button>
+            </div>
           </div>
-          <!-- Product section -->
-          <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-4 md:gap-6 flex-1">
-            <!-- Product Items -->
-            <div class="bg-white p-4 xl:px-6 xl:py-3 rounded-md shadow-md flex items-center gap-4 md:gap-8">
-              <div class="bg-[#FFF9F4] p-3 rounded-md">
-                <img src="/asstes/img/dog-cartoon.png" alt="dog" class="w-10 h-10">
+        </div>
+      </section>
+      <!-- pet product section end  -->
+
+      <!-- price section start -->
+      <section class="py-24">
+        <div class="container px-4 mx-auto">
+          <h2
+            class="text-2xl sm:text-3xl font-bold font-adlam mb-6 text-center sm:text-left"
+          >
+            Everyday Low Price
+          </h2>
+
+          <div class="flex flex-col md:flex-row gap-6">
+            <!-- Left Section -->
+            <div
+              class="flex flex-col md:flex-row items-center justify-between bg-gradient-to-l from-[#ACD2FD] to-[#F8CCFB] w-full md:w-[60%] p-6 rounded-lg"
+            >
+              <div class="space-y-3 text-center md:text-left">
+                <p class="text-lg sm:text-xl text-gray-500">Under Price</p>
+                <h3 class="text-2xl sm:text-3xl font-semibold font-adlam">
+                  Pet Grooming Mitt
+                </h3>
+                <span class="text-lg sm:text-2xl text-white font-semibold"
+                  >(Easy Hair Removal)</span
+                >
+                <p
+                  class="text-2xl sm:text-3xl font-adlam font-semibold text-gray-800"
+                >
+                  $19.99
+                </p>
               </div>
-              <div>
-                <i class="ri-star-line text-accent"><span class="text-black font-bold">4.5</span></i><br>
-                <span class="text-base md:text-xl font-semibold">Pet Bet</span><br>
-                <span class="text-sm font-bold">$39.99</span>
-              </div>
-            </div>
-            <div class="bg-white p-4 xl:px-6 xl:py-3 rounded-md shadow-md flex items-center gap-4 md:gap-8">
-              <div class="bg-[#FFF9F4] p-3 rounded-md">
-                <img src="/asstes/img/dog-cartoon.png" alt="dog" class="w-10 h-10">
-              </div>
-              <div>
-                <i class="ri-star-line text-accent"><span class="text-black font-bold">4.5</span></i><br>
-                <span class="text-base md:text-xl font-semibold">Pet Bet</span><br>
-                <span class="text-sm font-bold">$39.99</span>
-              </div>
-            </div>
-            <div class="bg-white p-4 xl:px-6 xl:py-3 rounded-md shadow-md flex items-center gap-4 md:gap-8">
-              <div class="bg-[#FFF9F4] p-3 rounded-md">
-                <img src="/asstes/img/dog-cartoon.png" alt="dog" class="w-10 h-10">
-              </div>
-              <div>
-                <i class="ri-star-line text-accent"><span class="text-black font-bold">4.5</span></i><br>
-                <span class="text-base md:text-xl font-semibold">Pet Bet</span><br>
-                <span class="text-sm font-bold">$39.99</span>
-              </div>
-            </div>
-            <div class="bg-white p-4 xl:px-6 xl:py-3 rounded-md shadow-md flex items-center gap-4 md:gap-8">
-              <div class="bg-[#FFF9F4] p-3 rounded-md">
-                <img src="/asstes/img/dog-cartoon.png" alt="dog" class="w-10 h-10">
-              </div>
-              <div>
-                <i class="ri-star-line text-accent"><span class="text-black font-bold">4.5</span></i><br>
-                <span class="text-base md:text-xl font-semibold">Pet Bet</span><br>
-                <span class="text-sm font-bold">$39.99</span>
+              <div class="mt-4 md:mt-0">
+                <img
+                  src="/asstes/img/cute-dog-mid.png"
+                  alt="dog"
+                  class="w-40 sm:w-52 md:w-[250px]"
+                />
               </div>
             </div>
-            <div class="bg-white p-4 xl:px-6 xl:py-3 rounded-md shadow-md flex items-center gap-4 md:gap-8">
-              <div class="bg-[#FFF9F4] p-3 rounded-md">
-                <img src="/asstes/img/dog-cartoon.png" alt="dog" class="w-10 h-10">
+
+            <!-- Right Section -->
+            <div
+              class="bg-gradient-to-r from-[#FFF9F4] to-[#F9DF8A] w-full md:w-[40%] p-6 rounded-lg relative"
+            >
+              <div class="space-y-3 text-center md:text-left">
+                <h3 class="text-2xl sm:text-3xl font-semibold font-adlam">
+                  Pet Grooming Mitt
+                </h3>
+                <p
+                  class="text-xl sm:text-2xl font-adlam font-semibold text-accent"
+                >
+                  $19.99
+                </p>
               </div>
-              <div>
-                <i class="ri-star-line text-accent"><span class="text-black font-bold">4.5</span></i><br>
-                <span class="text-base md:text-xl font-semibold">Pet Bet</span><br>
-                <span class="text-sm font-bold">$39.99</span>
-              </div>
-            </div>
-            <div class="bg-white p-4 xl:px-6 xl:py-3 rounded-md shadow-md flex items-center gap-4 md:gap-8">
-              <div class="bg-[#FFF9F4] p-3 rounded-md">
-                <img src="/asstes/img/dog-cartoon.png" alt="dog" class="w-10 h-10">
-              </div>
-              <div>
-                <i class="ri-star-line text-accent"><span class="text-black font-bold">4.5</span></i><br>
-                <span class="text-base md:text-xl font-semibold">Pet Bet</span><br>
-                <span class="text-sm font-bold">$39.99</span>
-              </div>
-            </div>
-            <div class="bg-white p-4 xl:px-6 xl:py-3 rounded-md shadow-md flex items-center gap-4 md:gap-8">
-              <div class="bg-[#FFF9F4] p-3 rounded-md">
-                <img src="/asstes/img/dog-cartoon.png" alt="dog" class="w-10 h-10">
-              </div>
-              <div>
-                <i class="ri-star-line text-accent"><span class="text-black font-bold">4.5</span></i><br>
-                <span class="text-base md:text-xl font-semibold">Pet Bet</span><br>
-                <span class="text-sm font-bold">$39.99</span>
+              <div class="flex justify-center md:justify-end">
+                <img
+                  src="/asstes/img/cute-pet-small.png"
+                  alt="dog"
+                  class="w-32 sm:w-44 md:w-[250px] md:absolute right-0 bottom-0"
+                />
               </div>
             </div>
-            <div class="bg-white p-4 xl:px-6 xl:py-3 rounded-md shadow-md flex items-center gap-4 md:gap-8">
-              <div class="bg-[#FFF9F4] p-3 rounded-md">
-                <img src="/asstes/img/dog-cartoon.png" alt="dog" class="w-10 h-10">
-              </div>
-              <div>
-                <i class="ri-star-line text-accent"><span class="text-black font-bold">4.5</span></i><br>
-                <span class="text-base md:text-xl font-semibold">Pet Bet</span><br>
-                <span class="text-sm font-bold">$39.99</span>
-              </div>
-            </div>
-            <div class="bg-white p-4 xl:px-6 xl:py-3 rounded-md shadow-md flex items-center gap-4 md:gap-8">
-              <div class="bg-[#FFF9F4] p-3 rounded-md">
-                <img src="/asstes/img/dog-cartoon.png" alt="dog" class="w-10 h-10">
-              </div>
-              <div>
-                <i class="ri-star-line text-accent"><span class="text-black font-bold">4.5</span></i><br>
-                <span class="text-base md:text-xl font-semibold">Pet Bet</span><br>
-                <span class="text-sm font-bold">$39.99</span>
-              </div>
-            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- main section end  -->
+
+    <!-- newsletter section  -->
+    <section class="z-10 relative" style="margin-bottom: -250px">
+      <div class="container">
+        <!-- footer image section -->
+        <div
+          class="bg-[#FFF9F4] flex items-center rounded-lg shadow-md p-10 gap-6"
+        >
+          <div class="p-8">
+            <img src="/asstes/img/cute-pet-small.png" alt="dog" />
+          </div>
+          <!-- footer newsletter section -->
+          <div class="flex-1 space-y-4">
+            <h2 class="text-4xl text-[#111111] font-bold font-adlam">
+              Get Pawsome News!
+            </h2>
+            <p class="text-xl text-gray-500">
+              Exclusive training tips, tricks, product deals, and more.
+            </p>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="bg-white px-6 py-3 text-xl border border-white rounded-md"
+            /><br />
+            <button
+              class="bg-accent px-6 py-2 text-xl border border-accent rounded-md hover:bg-transparent transition-all duration-300"
+            >
+              Subscribe
+            </button>
           </div>
         </div>
       </div>
     </section>
-    
-    <!-- pet product section start  -->
-    <section class="py-24">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3   lg:grid-cols-4 gap-6">
-          
-          <!-- Product Card 1 -->
-          <div class="w-full border rounded-lg shadow-md p-4 space-y-2">
-            <div class="text-black text-2xl font-bold px-3 py-1 rounded-md inline-block">Offer</div>
-            <div class="flex justify-center my-4">
-              <img src="/asstes/img/900_P992.jpg" alt="Dreamies Cat Treat" class="h-40">
-            </div>
-            <h3 class="font-semibold text-lg">Dreamies Cat Treat Biscuits with Salmon Flavour</h3>
-            <div class="flex items-center text-accent text-sm mt-2">
-              <span class="flex">★★★★★</span>
-              <span class="ml-2 text-gray-600">119 reviews</span>
-            </div>
-            <p class="text-gray-700 text-sm mt-1">60g</p>
-            <p class="text-accent font-semibold mt-2">Online Only 3 For £3 On Selected...</p>
-            <p class="text-2xl font-bold mt-1">£1.59</p>
-            <div class="flex items-center bg-gray-400 text-black rounded-md px-3 py-1 text-sm mt-2">
-              <span class="bg-accent text-white px-2 py-1 rounded-md">easy-repeat</span>
-              <span class="ml-2">Save 5%</span>
-            </div>
-            <button class="bg-accent text-black font-semibold text-lg w-full py-3 rounded-lg mt-4 hover:bg-transparent border border-accent transition">Add to basket</button>
-          </div>
-    
-          <!-- product card 2 -->
-          <div class="w-full border rounded-lg shadow-md p-4 space-y-2">
-            <div class="text-black text-2xl font-bold px-3 py-1 rounded-md inline-block">Offer</div>
-            <div class="flex justify-center my-4">
-              <img src="/asstes/img/900_P992.jpg" alt="Dreamies Cat Treat" class="h-40">
-            </div>
-            <h3 class="font-semibold text-lg">Dreamies Cat Treat Biscuits with Salmon Flavour</h3>
-            <div class="flex items-center text-accent text-sm mt-2">
-              <span class="flex">★★★★★</span>
-              <span class="ml-2 text-gray-600">119 reviews</span>
-            </div>
-            <p class="text-gray-700 text-sm mt-1">60g</p>
-            <p class="text-accent font-semibold mt-2">Online Only 3 For £3 On Selected...</p>
-            <p class="text-2xl font-bold mt-1">£1.59</p>
-            <div class="flex items-center bg-gray-400 text-black rounded-md px-3 py-1 text-sm mt-2">
-              <span class="bg-accent text-white px-2 py-1 rounded-md">easy-repeat</span>
-              <span class="ml-2">Save 5%</span>
-            </div>
-            <button class="bg-accent text-black font-semibold text-lg w-full py-3 rounded-lg mt-4 hover:bg-transparent border border-accent transition">Add to basket</button>
-          </div>
-    
-          <!-- product card 3 -->
-          <div class="w-full border rounded-lg shadow-md p-4 space-y-2">
-            <div class="text-black text-2xl font-bold px-3 py-1 rounded-md inline-block">Offer</div>
-            <div class="flex justify-center my-4">
-              <img src="/asstes/img/900_P992.jpg" alt="Dreamies Cat Treat" class="h-40">
-            </div>
-            <h3 class="font-semibold text-lg">Dreamies Cat Treat Biscuits with Salmon Flavour</h3>
-            <div class="flex items-center text-accent text-sm mt-2">
-              <span class="flex">★★★★★</span>
-              <span class="ml-2 text-gray-600">119 reviews</span>
-            </div>
-            <p class="text-gray-700 text-sm mt-1">60g</p>
-            <p class="text-accent font-semibold mt-2">Online Only 3 For £3 On Selected...</p>
-            <p class="text-2xl font-bold mt-1">£1.59</p>
-            <div class="flex items-center bg-gray-400 text-black rounded-md px-3 py-1 text-sm mt-2">
-              <span class="bg-accent text-white px-2 py-1 rounded-md">easy-repeat</span>
-              <span class="ml-2">Save 5%</span>
-            </div>
-            <button class="bg-accent text-black font-semibold text-lg w-full py-3 rounded-lg mt-4 hover:bg-transparent border border-accent transition">Add to basket</button>
-          </div>
-        </div>
-      </div>
-    </section>        
-    <!-- pet product section end  -->
 
-    <!-- price section start -->
-    <section class="py-24">
-      <div class="container px-4 mx-auto">
-        <h2 class="text-2xl sm:text-3xl font-bold font-adlam mb-6 text-center sm:text-left">
-          Everyday Low Price
-        </h2>
-        
-        <div class="flex flex-col md:flex-row gap-6">
-          <!-- Left Section -->
-          <div class="flex flex-col md:flex-row items-center justify-between bg-gradient-to-l from-[#ACD2FD] to-[#F8CCFB] w-full md:w-[60%] p-6 rounded-lg">
-            <div class="space-y-3 text-center md:text-left">
-              <p class="text-lg sm:text-xl text-gray-500">Under Price</p>
-              <h3 class="text-2xl sm:text-3xl font-semibold font-adlam">Pet Grooming Mitt</h3>
-              <span class="text-lg sm:text-2xl text-white font-semibold">(Easy Hair Removal)</span>
-              <p class="text-2xl sm:text-3xl font-adlam font-semibold text-gray-800">$19.99</p>
-            </div>
-            <div class="mt-4 md:mt-0">
-              <img src="/asstes/img/cute-dog-mid.png" alt="dog" class="w-40 sm:w-52 md:w-[250px]">
-            </div>
+    <!-- footer section start  -->
+    <footer class="bg-accent py-24 overflow-hidden relative">
+      <div class="container px-6">
+        <div
+          class="flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-20 mt-64 lg:mt-40"
+          style="margin-top: 250px"
+        >
+          <!-- Logo & Description -->
+          <div class="space-y-6 text-left w-full">
+            <a class="flex items-center gap-2" href="#">
+              <img
+                src="/asstes/img/logo-footer.png"
+                alt="dog"
+                class="w-12 h-12"
+              />
+              <p class="text-2xl text-[#111111] font-adlam">
+                Browse<span class="text-white">4</span>Pets
+              </p>
+            </a>
+            <p class="text-base text-[#111111] font-adlam">
+              Discover a world of treats, toys, and <br />
+              essentials handpicked for your furry <br />
+              friends
+            </p>
           </div>
-    
-          <!-- Right Section -->
-          <div class="bg-gradient-to-r from-[#FFF9F4] to-[#F9DF8A] w-full md:w-[40%] p-6 rounded-lg relative">
-            <div class="space-y-3 text-center md:text-left">
-              <h3 class="text-2xl sm:text-3xl font-semibold font-adlam">Pet Grooming Mitt</h3>
-              <p class="text-xl sm:text-2xl font-adlam font-semibold text-accent">$19.99</p>
-            </div>
-            <div class="flex justify-center md:justify-end">
-              <img src="/asstes/img/cute-pet-small.png" alt="dog" class="w-32 sm:w-44 md:w-[250px] md:absolute right-0 bottom-0">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <!-- main section end  -->
 
-  <!-- newsletter section  -->
-  <section class="z-10 relative" style="margin-bottom: -250px;">
-    <div class="container">
-      <!-- footer image section -->
-      <div class="bg-[#FFF9F4] flex items-center rounded-lg shadow-md p-10 gap-6">
-        <div class="p-8">
-          <img src="/asstes/img/cute-pet-small.png" alt="dog">
-        </div>
-        <!-- footer newsletter section -->
-        <div class="flex-1 space-y-4">
-          <h2 class="text-4xl text-[#111111] font-bold font-adlam">Get Pawsome News!</h2>
-          <p class="text-xl text-gray-500">Exclusive training tips, tricks, product deals, and more.</p>
-          <input type="email" placeholder="Enter your email" class="bg-white px-6 py-3 text-xl border border-white rounded-md"><br>
-          <button class="bg-accent px-6 py-2 text-xl border border-accent rounded-md hover:bg-transparent transition-all duration-300">Subscribe</button>
-        </div>
-      </div>
-    </div>
-  </section>
+          <!-- Navigation Links -->
+          <div class="w-full">
+            <ul
+              class="flex flex-col items-start space-y-4 font-adlam text-left"
+            >
+              <li class="text-xl hover:text-white transition duration-200">
+                <a href="#">Find a pet</a>
+              </li>
+              <li class="text-xl hover:text-white transition duration-200">
+                <a href="#">Breeds</a>
+              </li>
+              <li class="text-xl hover:text-white transition duration-200">
+                <a href="#">Contact us</a>
+              </li>
+            </ul>
+          </div>
 
-  <!-- footer section start  -->
-  <footer class="bg-accent py-24 overflow-hidden relative">
-    <div class="container px-6">
-      <div class="flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-20 mt-64 lg:mt-40" style="margin-top: 250px;">
-        
-        <!-- Logo & Description -->
-        <div class="space-y-6 text-left w-full">
-          <a class="flex items-center gap-2" href="#">
-            <img src="/asstes/img/logo-footer.png" alt="dog" class="w-12 h-12">
-            <p class="text-2xl text-[#111111] font-adlam">Browse<span class="text-white">4</span>Pets</p>
-          </a>
-          <p class="text-base text-[#111111] font-adlam">
-            Discover a world of treats, toys, and <br>
-            essentials handpicked for your furry <br> friends
-          </p>
-        </div>
-  
-        <!-- Navigation Links -->
-        <div class="w-full">
-          <ul class="flex flex-col items-start space-y-4 font-adlam text-left">
-            <li class="text-xl hover:text-white transition duration-200"><a href="#">Find a pet</a></li>
-            <li class="text-xl hover:text-white transition duration-200"><a href="#">Breeds</a></li>
-            <li class="text-xl hover:text-white transition duration-200"><a href="#">Contact us</a></li>
-          </ul>
-        </div>
-  
-        <!-- Social Links -->
-        <div class="w-full">
-          <p class="text-xl font-adlam">Follow Us</p>
-          <div class="text-2xl flex justify-start space-x-4 mt-2">
-            <a href="#"><i class="ri-facebook-fill"></i></a>
-            <a href="#"><i class="ri-instagram-fill"></i></a>
-            <a href="#"><i class="ri-twitter-fill"></i></a>
-            <a href="#"><i class="ri-youtube-fill"></i></a>
+          <!-- Social Links -->
+          <div class="w-full">
+            <p class="text-xl font-adlam">Follow Us</p>
+            <div class="text-2xl flex justify-start space-x-4 mt-2">
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+              <a href="#"><i class="ri-instagram-fill"></i></a>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+              <a href="#"><i class="ri-youtube-fill"></i></a>
+            </div>
           </div>
         </div>
-  
       </div>
-    </div>
-  </footer>
-  <!-- footer section end  -->
-</body>
+    </footer>
+    <!-- footer section end  -->
+  </body>
 </html>
