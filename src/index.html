@@ -25,32 +25,38 @@
           <img src="../asstes/img/logo-header.png" alt="logo">
           <p class="text-2xl text-[#111111]">Browse<span class="text-[#FFDC26]">4</span>Pets</p>
         </div>
-        <!-- navbar menu  -->
-        <div>
+        <!-- navbar menu -->
+        <div class="hidden md:block">
           <ul class="flex items-center space-x-6 font-sora">
             <li class="text-xl hover:text-accent transition duration-200"><a href="#">Find a pet</a></li>
             <li class="text-xl hover:text-accent transition duration-200"><a href="#">Breeds</a></li>
             <li class="text-xl hover:text-accent transition duration-200"><a href="#">Contact us</a></li>
           </ul>
         </div>
-        <!-- navbar icons  -->
-        <div class="flex items-center space-x-4">
+        <!-- navbar icons -->
+        <div class="lg:flex items-center space-x-4">
           <span class="text-xl"><i class="ri-notification-line"></i></span>
           <span class="text-xl cursor-pointer"><i class="ri-search-line"></i></span> 
           <button class="px-6 py-2 text-xl border border-accent rounded-md hover:bg-transparent transition-all duration-300">Login</button>
           <button class="bg-accent px-6 py-2 text-xl border border-accent rounded-md hover:bg-transparent transition-all duration-300">Register</button>
         </div>
+        <!-- mobile menu button-->
+        <!-- <div class="xl:hidden">
+          <button class="text-xl" aria-label="Mobile menu toggle">
+            <i class="ri-menu-line"></i>
+          </button>
+        </div> -->    
       </div>
     </div>
     <!-- hero section start  -->
-    <div class="bg-cover bg-no-repeat h-[749px] pt-28" style="background-image: url(../asstes/img/cat-big.png);">
-      <div class="container">
-        <h1 class="font-adlam text-6xl leading-[73px]">Pamper Your Pet,<br> Because They Deserve<br> the Bes</h1>
-        <p class="text-xl mt-6">Discover a world of treats, toys, and essentials handpicked for<br> your furry friends. Shop now and make tails wag with joy!</p>
+    <div class="bg-cover bg-no-repeat h-[749px] flex items-center opacity-0 animate-fade-in-up" style="background-image: url(/asstes/img/cat-big.png);">
+      <div class="container text-center md:text-left opacity-0 animate-fade-in-up">
+        <h1 class="font-adlam text-6xl lg:text-6xl leading-[50px] md:leading-[73px]">Pamper Your Pet,<br> Because They Deserve<br> the Best</h1>
+        <p class="text-xl mt-6">Discover a world of treats, toys, and essentials handpicked for<br class="hidden md:inline"> your furry friends. Shop now and make tails wag with joy!</p>
         <button class="bg-accent px-6 py-2 text-xl border border-accent rounded-md hover:bg-transparent transition-all duration-300 mt-6 font-semibold">Find a Pet</button>
       </div>
     </div>
-  </header>
+  </header>  
   <!-- header section end  -->
     
   <!-- main section start  -->
